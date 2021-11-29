@@ -1,0 +1,11 @@
+<resources>
+    <style name="Theme.DietMealPlan" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/main</item>
+        <item name="colorPrimaryVariant">@color/second</item>
+        <item name="colorOnPrimary">@color/accent</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:fontFamily">@font/opensans</item>
+    </style>
+</resources>

@@ -1,0 +1,23 @@
+----- App Name
+Diet Meal Plan
+
+
+-----Sort description
+Here's exactly how to start this plant-based, heart-healthy plan
+
+
+-----Description
+If you're already sold on giving the Mediterranean diet a try but don't know where to start, this collection of heart-healthy recipes is for you. Here's how to start the Mediterranean diet, with R.D.-approved ideas for breakfast, lunch, and dinner.
+
+
+-----Key (name_key | price) or pick price [30, 50, 80, 100, 150, 200]
+premium_1_week
+premium_1_month
+premium_3_month
+premium_6_month
+premium_1_year
+
+
+-----Key description
+Premium 1 week.
+Upgrade the premium package for the best application experience.
