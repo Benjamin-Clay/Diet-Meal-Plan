@@ -13,10 +13,18 @@ import com.mona_daigle.diet_meal_plan.upgrade.UpgradeManager
 class SplashActivity : AppCompatActivity(), PurchasesUpdatedListener, BillingClientStateListener,
     PurchasesResponseListener {
     private lateinit var billingClient: BillingClient
+    private val appDatabase by lazy {
+        AppDatabase(this)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+
+        if(appDatabase.getMeals(null, null).isEmpty()){
+            appDatabase.insertMeals(dataMeals)
+        }
+
 
         billingClient = BillingClient.newBuilder(this)
             .setListener(this)
