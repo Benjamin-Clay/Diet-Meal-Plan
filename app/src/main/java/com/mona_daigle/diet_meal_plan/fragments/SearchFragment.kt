@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.view.Window
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
+import com.google.android.material.snackbar.Snackbar
 import com.mona_daigle.diet_meal_plan.DetailActivity
 import com.mona_daigle.diet_meal_plan.EditActivity
 import com.mona_daigle.diet_meal_plan.adapters.MealAdapter
@@ -18,6 +19,7 @@ import com.mona_daigle.diet_meal_plan.database.AppDatabase
 import com.mona_daigle.diet_meal_plan.databinding.DialogDeleteBinding
 import com.mona_daigle.diet_meal_plan.databinding.FragmentSearchBinding
 import com.mona_daigle.diet_meal_plan.models.Meal
+import com.mona_daigle.diet_meal_plan.upgrade.UpgradeManager
 
 class SearchFragment : Fragment(), MealAdapter.OnItemMealClickListener, TextWatcher {
     private lateinit var binding: FragmentSearchBinding
@@ -62,6 +64,10 @@ class SearchFragment : Fragment(), MealAdapter.OnItemMealClickListener, TextWatc
     }
 
     override fun onItemMealClick(index: Int, meal: Meal) {
+        if (index > 7 && UpgradeManager.getInstance()?.isPremium == false) {
+            Snackbar.make(binding.root, "Please get premium to unlock", 1500).show()
+            return
+        }
         startActivity(Intent(requireActivity(), DetailActivity::class.java).putExtra("meal", meal))
     }
 
@@ -81,7 +87,8 @@ class SearchFragment : Fragment(), MealAdapter.OnItemMealClickListener, TextWatc
     }
 
     override fun onItemMealClickDelete(index: Int, meal: Meal) {
-        val dialogDeleteBinding: DialogDeleteBinding = DialogDeleteBinding.inflate(LayoutInflater.from(requireActivity()), null, false)
+        val dialogDeleteBinding: DialogDeleteBinding =
+            DialogDeleteBinding.inflate(LayoutInflater.from(requireActivity()), null, false)
         val dialog: Dialog = Dialog(requireActivity())
         dialog.setContentView(dialogDeleteBinding.root)
 

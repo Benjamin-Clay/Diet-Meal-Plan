@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.view.Window
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
+import com.google.android.material.snackbar.Snackbar
 import com.mona_daigle.diet_meal_plan.AddActivity
 import com.mona_daigle.diet_meal_plan.DetailActivity
 import com.mona_daigle.diet_meal_plan.EditActivity
@@ -17,6 +18,7 @@ import com.mona_daigle.diet_meal_plan.database.AppDatabase
 import com.mona_daigle.diet_meal_plan.databinding.DialogDeleteBinding
 import com.mona_daigle.diet_meal_plan.databinding.FragmentFavouriteBinding
 import com.mona_daigle.diet_meal_plan.models.Meal
+import com.mona_daigle.diet_meal_plan.upgrade.UpgradeManager
 
 class FavouriteFragment : Fragment(), MealAdapter.OnItemMealClickListener {
     private lateinit var binding: FragmentFavouriteBinding
@@ -63,6 +65,10 @@ class FavouriteFragment : Fragment(), MealAdapter.OnItemMealClickListener {
     }
 
     override fun onItemMealClick(index: Int, meal: Meal) {
+        if (index > 7 && UpgradeManager.getInstance()?.isPremium == false) {
+            Snackbar.make(binding.root, "Please get premium to unlock", 1500).show()
+            return
+        }
         startActivity(Intent(requireActivity(), DetailActivity::class.java).putExtra("meal", meal))
     }
 
