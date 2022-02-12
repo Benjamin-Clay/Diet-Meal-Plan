@@ -22,27 +22,52 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
-        android:fontFamily="@font/opensans_semibold"
+        android:fontFamily="@font/opensans_bold"
         android:gravity="center_vertical"
-        android:text="Add Meal"
+        android:text="Add Diet Plan"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
         app:layout_constraintBottom_toBottomOf="@+id/ivBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ivBack" />
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/opensans_semibold"
+        android:text="Consume 10 diamonds to add a diet plan"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBack" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/opensans_semibold"
+        android:text="Consume 10 diamonds to add a diet plan"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardDiamond"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="12dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         android:layout_marginRight="12dp"
         app:cardCornerRadius="4dp"
         app:cardElevation="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appbar">
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -57,7 +82,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/opensans_medium"
-                android:text="Diamonds"
+                android:text="My diamonds"
                 android:textSize="16sp" />
 
             <LinearLayout
@@ -91,7 +116,7 @@
         android:id="@+id/imageView"
         android:layout_width="164dp"
         android:layout_height="164dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:src="@drawable/ic_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -112,33 +137,15 @@
             android:fontFamily="@font/opensans_medium"
             android:letterSpacing="0.05"
             android:text="Title"
-            android:textSize="16sp" />
+            android:textSize="15sp" />
 
         <EditText
             android:id="@+id/etTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:hint="Enter title" />
-
-        <!--        <TextView-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginTop="16dp"-->
-        <!--            android:fontFamily="@font/opensans_medium"-->
-        <!--            android:letterSpacing="0.05"-->
-        <!--            android:text="Price"-->
-        <!--            android:textSize="16sp" />-->
-
-        <!--        <EditText-->
-        <!--            android:id="@+id/etPrice"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginTop="8dp"-->
-        <!--            android:gravity="start"-->
-        <!--            android:hint="Enter price"-->
-        <!--            android:inputType="number"-->
-        <!--            android:maxLines="1" />-->
+            android:hint="Enter title"
+            android:textSize="15sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -147,7 +154,7 @@
             android:fontFamily="@font/opensans_medium"
             android:letterSpacing="0.05"
             android:text="Description"
-            android:textSize="16sp" />
+            android:textSize="15sp" />
 
         <EditText
             android:id="@+id/etDes"
@@ -156,16 +163,17 @@
             android:layout_marginTop="8dp"
             android:gravity="start"
             android:hint="Enter description"
-            android:lines="2" />
+            android:lines="2"
+            android:textSize="15sp" />
 
         <Button
             android:id="@+id/btSave"
             android:layout_width="256dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/opensans_semibold"
-            android:text="Save"
+            android:text="Add New"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="16sp" />

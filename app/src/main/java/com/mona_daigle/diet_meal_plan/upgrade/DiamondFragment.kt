@@ -117,7 +117,7 @@ class DiamondFragment : Fragment(),
                         binding.rvDiamond.visibility = View.VISIBLE
                         if (skuDiamonds.isEmpty()) {
                             binding.tvError.visibility = View.VISIBLE
-                            binding.tvError.text = "No products available";
+                            binding.tvError.text = "No products available"
                         }
                     }
                 } else {

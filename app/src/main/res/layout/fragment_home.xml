@@ -39,7 +39,7 @@
         android:layout_marginRight="16dp"
         android:backgroundTint="@color/accent"
         android:fontFamily="@font/opensans_semibold"
-        android:text="Upgrade"
+        android:text="Get Diamond"
         android:textAllCaps="false"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/appbar"

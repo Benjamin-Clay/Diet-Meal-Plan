@@ -21,7 +21,7 @@ class UpgradeManager {
         private const val BUY_6999_DIAMONDS = "dietmealplan_6999_diamonds"
 
         val premiumIds = listOf(
-            "android.test.purchased",
+//            "android.test.purchased",
             PREMIUM_1_WEEK,
             PREMIUM_1_MONTH,
             PREMIUM_3_MONTH,
@@ -30,7 +30,7 @@ class UpgradeManager {
         )
 
         val diamondIds = listOf(
-            "android.test.purchased",
+//            "android.test.purchased",
             BUY_69_DIAMONDS,
             BUY_139_DIAMONDS,
             BUY_349_DIAMONDS,

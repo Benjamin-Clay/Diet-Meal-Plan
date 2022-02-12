@@ -64,10 +64,10 @@ class SearchFragment : Fragment(), MealAdapter.OnItemMealClickListener, TextWatc
     }
 
     override fun onItemMealClick(index: Int, meal: Meal) {
-        if (index > 7 && UpgradeManager.getInstance()?.isPremium == false) {
+        /*if (index > 7 && UpgradeManager.getInstance()?.isPremium == false) {
             Snackbar.make(binding.root, "Please get premium to unlock", 1500).show()
             return
-        }
+        }*/
         startActivity(Intent(requireActivity(), DetailActivity::class.java).putExtra("meal", meal))
     }
 

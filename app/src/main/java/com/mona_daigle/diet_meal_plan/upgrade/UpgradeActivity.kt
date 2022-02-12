@@ -1,14 +1,11 @@
 package com.mona_daigle.diet_meal_plan.upgrade
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.mona_daigle.diet_meal_plan.R
 import com.mona_daigle.diet_meal_plan.databinding.ActivityUpgradeBinding
-import com.google.android.material.tabs.TabLayout
-import com.mona_daigle.diet_meal_plan.upgrade.DiamondFragment
-import com.mona_daigle.diet_meal_plan.upgrade.PremiumFragment
 
-class UpgradeActivity : AppCompatActivity(), TabLayout.OnTabSelectedListener {
+class UpgradeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityUpgradeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,28 +13,28 @@ class UpgradeActivity : AppCompatActivity(), TabLayout.OnTabSelectedListener {
         binding = ActivityUpgradeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.ivBack.setOnClickListener { onBackPressed() }
+        binding.fabBack.setOnClickListener { onBackPressed() }
 
-        binding.tabLayout.addOnTabSelectedListener(this)
+//        binding.tabLayout.addOnTabSelectedListener(this)
 
         supportFragmentManager.beginTransaction()
             .add(R.id.fragmentContainer, DiamondFragment.newInstance()).commit()
 
     }
 
-    override fun onTabSelected(tab: TabLayout.Tab?) {
-        if (tab?.text == "Diamond") {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, DiamondFragment.newInstance()).commit()
-        } else {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, PremiumFragment.newInstance()).commit()
-        }
-    }
-
-    override fun onTabUnselected(tab: TabLayout.Tab?) {
-    }
-
-    override fun onTabReselected(tab: TabLayout.Tab?) {
-    }
+//    override fun onTabSelected(tab: TabLayout.Tab?) {
+//        if (tab?.text == "Diamond") {
+//            supportFragmentManager.beginTransaction()
+//                .replace(R.id.fragmentContainer, DiamondFragment.newInstance()).commit()
+//        } else {
+//            supportFragmentManager.beginTransaction()
+//                .replace(R.id.fragmentContainer, PremiumFragment.newInstance()).commit()
+//        }
+//    }
+//
+//    override fun onTabUnselected(tab: TabLayout.Tab?) {
+//    }
+//
+//    override fun onTabReselected(tab: TabLayout.Tab?) {
+//    }
 }

@@ -9,6 +9,8 @@ Here's exactly how to start this plant-based, heart-healthy plan
 -----Description
 If you're already sold on giving the Mediterranean diet a try but don't know where to start, this collection of heart-healthy recipes is for you. Here's how to start the Mediterranean diet, with R.D.-approved ideas for breakfast, lunch, and dinner.
 
+In-App Purchase: Add a new diet plan.
+
 Key thanh toán: phần này mn đặt theo quy chuẩn này giúp e.
 
 tên app: viết liền ko dấu, ko phân tách các từ: ví dụ tên app là Image Memory thì đặt trong key là imagememory
